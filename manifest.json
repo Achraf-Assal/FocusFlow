@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "FocusFlow",
+    "version": "1.0",
+    "description": "time spent tracker",
+    "author": "me",
+    "permissions": [],
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "clock.png",
+        "48": "clock.png",
+        "128": "clock.png"
+      }
+    },
+    "icons": {
+      "16": "clock.png",
+      "48": "clock.png",
+      "128": "clock.png"
+    }
+  }
+  
